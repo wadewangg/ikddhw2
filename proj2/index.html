@@ -200,7 +200,7 @@ var n = 13, // number of layers
           var xPosition = d3.mouse(this)[0] - 15;
           var yPosition = d3.mouse(this)[1] - 25;
           tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-          tooltip.select("text").text("hello world");
+          tooltip.select("text").text(d.y);
         });
 		
     };
@@ -224,7 +224,7 @@ var n = 13, // number of layers
           var yPosition = d3.mouse(this)[1] - 25;
          // console.log(xPosition);
           tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-          tooltip.select("text").text("hello world");
+          tooltip.select("text").text(Math.round(d.y0 + d.y));
         });
     };
 
@@ -234,7 +234,7 @@ var n = 13, // number of layers
     tooltip.append("rect")
         .attr("width", 30)
         .attr("height", 20)
-        .attr("fill", "red")
+        .attr("fill", "white")
         .style("opacity", 0.5);
      
     tooltip.append("text")
